@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Request Books</title>
+    <style>
+        body {
+            background-image: url("file:///C:/Users/narra/OneDrive/Pictures/vvitpro.jpeg");
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightskyblue;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Library Book Request</h2>
+
+        <form action="InsertRequestBooks" method="post">
+            <label for="FullName">Full Name:</label>
+            <input type="text" id="FullName" name="Fullname" required>
+
+            <label for="RegisterNumber">Register Number:</label>
+            <input type="text" id="RegisterNumber" name="RegisterNumber" required>
+
+            <label for="BookId">Book Id:</label>
+            <input type="text" id="BookId" name="BookId" required>
+
+            <label for="BookTitle">Book Title:</label>
+            <input type="text" id="BookTitle" name="BookTitle" required>
+
+            <label for="BookAuthor">Book Author:</label>
+            <input type="text" id="BookAuthor" name="Author" required>
+
+            <label for="BookReturnDate">Book Return Date:</label>
+            <input type="date" id="BookReturnDate" name="Date" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+
+</html>

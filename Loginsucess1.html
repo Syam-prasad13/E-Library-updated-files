@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      background-image: url("https://res.cloudinary.com/dcwrp6n69/image/upload/v1704809806/21532473_6463395_n4s64t.jpg");
+      background-size: cover;
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+    }
+    .coloring {
+      font-size: 15px;
+    }
+    .search-form {
+      position: absolute;
+      right: 200px;
+    }
+    .navbar {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $(".nav-link").click(function(e){
+        e.preventDefault();
+        var href = $(this).attr("href");
+        $("iframe").attr("src", href);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="card">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a style="color:white" href="E-Library2.html"><i class="fa fa-home" style="font-size:20px">Home</i></a><hr>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav coloring">
+          <a class="nav-link" href="addLibrarain.html" style="color:white">Add Librarian</a>
+          <a class="nav-link" href="RetrieveLibrarainData" style="color:white">View Librarian</a>
+          <a class="nav-link" href="RetrieveStudentDetails" style="color:white">View Student</a>
+          <a class="nav-link" href="uploadnotifications.html" style="color:white">Upload Notifications</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          <form class="form-inline my-2 my-lg-0 search-form">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <button onclick="location.href='E-Library2.html'" class="btn btn-danger">Logout</button>
+    </nav>
+    <iframe src="" style="width:100%; height:100vh; border:none;"></iframe>
+  </div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background: -webkit-linear-gradient(to right, #155799, #159957);
+            background: linear-gradient(to right, #155799, #159957);
+            color: whitesmoke;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 35rem;
+            margin: auto;
+            color: whitesmoke;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(11, 15, 13, 0.582);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            padding: 20px 25px;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+            padding: 15px 18px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #030804;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 5px;
+            margin: 7px 0;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .headingsContainer {
+            text-align: center;
+        }
+
+        .headingsContainer p {
+            color: gray;
+        }
+
+        .mainContainer {
+            padding: 16px;
+        }
+
+        .subcontainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .subcontainer a {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        span.forgotpsd a {
+            float: right;
+            color: whitesmoke;
+            padding-top: 16px;
+        }
+
+        .forgotpsd a {
+            color: rgb(74, 146, 235);
+        }
+
+        .forgotpsd a:link {
+            text-decoration: none;
+        }
+
+        .register {
+            color: white;
+            text-align: center;
+        }
+
+        .register a {
+            color: rgb(74, 146, 235);
+        }
+
+        .register a:link {
+            text-decoration: none;
+        }
+
+        /* Media queries for the responsiveness of the page */
+        @media screen and (max-width: 600px) {
+            form {
+                width: 25rem;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            form {
+                width: 20rem;
+            }
+        }
+
+        .navbar {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav coloring">
+                <li class="nav-item">
+                    <a class="nav-link" href="E-Library2.html" style="color:white; font-size:17px">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="E-Library3.html" style="color:white">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Librarainlogin.html" style="color:white">Librarian</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="studentlogin.html" style="color:white">Student</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="previousyearquestions.html" style="color:white;">Previous Question Papers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Open Access Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Notifications</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <h1></h1><br>
+    <form action="StudentServlet" method="post">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>Student</h3>
+            <p>Sign in with your company mail and password</p>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Your company mail</label>
+            <input type="text" placeholder="21bq1a1XXX@company.net" name="username">
+
+            <br><br><br>
+
+            <!-- Password -->
+            <label for="pswrd">Your password</label>
+            <input type="password" placeholder="Enter Password" name="password"><br><br>
+
+            <!-- subcontainer for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="forgotPassword.jsp">Forgot Password?</a></p>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+
+            <!-- Sign up link -->
+            <p class="register">Not a member? <a href="register.html">Register here!</a></p>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .card {
+            background-image: url("https://www.vvitguntur.com/images/slider3/vvit_drone_4k-min.jpeg");
+            background-size: cover;
+            text-align: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .mainheading {
+            color: blue;
+            font-size: 70px;
+        }
+
+        .paragraph {
+            color: blue;
+            font-size: 40px
+        }
+
+        .buttonstyle {
+            color: white;
+            font-size: 30px;
+            border-radius: 10px;
+            border-width: 3px;
+            background-color: #0ac23b;
+        }
+
+        .cards {
+            text-align: center;
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 0px;
+        }
+
+        .coloring {
+            font-width: 20px;
+            font-size: 15px;
+        }
+
+        .cardstyle {
+            text-align: left;
+            font-size: 20px;
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 60px;
+            background-color: #25b1cc;
+            display: none;
+        }
+
+        .quotation {
+            font: 60px;
+        }
+
+        .logo {
+            background-image: url("https://res.cloudinary.com/dcwrp6n69/image/upload/v1696160700/download_btjumd.jpg");
+            background-size: cover;
+            height: 150px;
+            width: 200px;
+            margin-left: 650px;
+            margin-bottom: 250px;
+            display: none;
+        }
+
+        .register-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background-color: #0ac23b;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card d-flex flex-column justify-content-end">
+        <p class="logo"></p>
+        <marquee width="100%" height="6%" behavior="scroll" bgcolor="pink" style="font-size:30px">  
+            Welcome to our E-Library—a sanctuary for minds hungry for knowledge....  
+        </marquee>  
+        <div class="cards">
+            <div>
+                <h1 class="mainheading">E-Library</h1>
+                <p class="paragraph">Select the books</p>
+                <a href="#" target="_blank">
+                    <button class="buttonstyle">Get Started</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="register-button" onclick="showLibraryInfo()" > Explore</div>
+
+    <!-- Add your registration section below this line -->
+    <div id="library-info" class="cardstyle">
+            <h2>Central Library</h2>
+            <p><strong>Category:</strong> Other Facilities</p>
+            <p>
+                <strong>Central Library</strong><br>
+                “I was born with a reading list I will never finish.” ― Maud Casey
+            </p>
+            <p>
+                The college has a computerized library well equipped with a large collection of books under the categories of academics, reference, and general.
+                All the books are bar-coded and indexed using the latest library management software.
+                The library also subscribes to both national and international magazines, journals, and periodicals in addition to leading national dailies.
+            </p>
+            <p>
+                It is a book house of knowledge, where its prime motto is to guide every student in an appropriate way and pave the road to success.
+                It meets the innumerable needs of the students in the academic curriculum.
+                It satiates the intellectual hunger and quenches the thirst for knowledge of the scholarly students.
+                The book collection ranges from literary classics to management guides and from career counselors to technical reviews.
+            </p>
+            <p>
+                <strong>Library Details: Volumes, Titles & Journals</strong>
+            </p>
+            <table border="1">
+                <tr>
+                    <th>Department</th>
+                    <th>CSE</th>
+                    <th>ECE</th>
+                    <th>EEE</th>
+                    <th>IT</th>
+                    <th>CIVIL</th>
+                    <th>MECH</th>
+                    <th>CSM</th>
+                    <th>CIC</th>
+                    <th>CSO</th>
+                    <th>AI & DS</th>
+                    <th>AI & ML</th>
+                    <th>M.Tech</th>
+                    <th>General</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Volumes</td>
+                    <td>13440</td>
+                    <td>11175</td>
+                    <td>9310</td>
+                    <td>8890</td>
+                    <td>7920</td>
+                    <td>9010</td>
+                    <td>2840</td>
+                    <td>1710</td>
+                    <td>1860</td>
+                    <td>2250</td>
+                    <td>2475</td>
+                    <td>11650</td>
+                    <td>18290</td>
+                    <td>100820</td>
+                </tr>
+                <tr>
+                    <td>Titles</td>
+                    <td>1700</td>
+                    <td>1590</td>
+                    <td>1245</td>
+                    <td>1435</td>
+                    <td>940</td>
+                    <td>940</td>
+                    <td>525</td>
+                    <td>380</td>
+                    <td>470</td>
+                    <td>485</td>
+                    <td>520</td>
+                    <td>2520</td>
+                    <td>11700</td>
+                    <td>24450</td>
+                </tr>
+                <tr>
+                    <td>Journals</td>
+                    <td>24</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>12</td>
+                    <td>06</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>204</td>
+                </tr>
+            </table>
+            <p>
+                <strong>* GENERAL BOOKS INCLUDES SCIENCE & HUMANITIES, FICTION, NON-FICTON, HANDBOOKS, RARE BOOKS, APTITUDE, REASONING AND PSYCHOLOGY BOOKS etc.</strong>
+            </p>
+            <p>
+                <strong>Digital Library</strong>
+            </p>
+            <ul>
+                <li>Digital Library has 32 Computer Systems with High-Speed Internet and backup</li>
+                <li>NPTEL E-Lectures and Videos</li>
+                <li>DELNET</li>
+                <li>IEEE Society Periodicals, ASME, and ASCE</li>
+                <li>National Digital Library of India (NDLI)</li>
+                <li>Open Access Journals/Dissertations/Archives/Database contents available at the library portal</li>
+            </ul>
+            <p>
+                <strong>Library Services</strong>
+            </p>
+            <ul>
+                <li><strong>CIRCULATION SERVICE:</strong> Daily about 250 books issue/returns</li>
+                <li><strong>REFERENCE SERVICE:</strong> 26550 Reference Books available</li>
+                <li><strong>REPROGRAPHY / SCANNING:</strong> Available</li>
+                <li><strong>E-LEARNING/ ONLINE ACCESS:</strong> IEEE, ASME, ASCE, DELNET, NPTEL, IETE, IAS etc.</li>
+                <li><strong>BOOK BANK/TEXT BOOK SERVICE:</strong> SC/ST Book Bank = 6550 Books available</li>
+                <li><strong>RARE BOOKS / HAND BOOKS / YEAR BOOKS:</strong> about 2000 books available</li>
+                <li><strong>COMPETITIVE EXAMINATION Books:</strong> GATE, IES, CAT, GRE, etc. available</li>
+                <li><strong>AUTOMATION & NETWORKING:</strong> EZ LIBRARY SOFTWARE / INTRANET</li>
+                <li><strong>LIBRARY ORIENTATION/AWARENESS:</strong> In Library Hours</li>
+            </ul>
+            <p>
+                <strong>Staff</strong>
+            </p>
+            <table border="1">
+                <tr>
+                    <th>SNO</th>
+                    <th>NAME</th>
+                    <th>QUALIFICATION</th>
+                    <th>DESIGNATION</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>N.V.SAI KRISHNA</td>
+                    <td>M.A., M.L.I.Sc., M.Phil., PGDCA</td>
+                    <td>LIBRARIAN</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dr. CH.MADHAVI</td>
+                    <td>M.L.I.Sc., Ph.D.</td>
+                    <td>LIBRARIAN- CIRCULATION SECTION</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>VELAGA MANAVENDRA</td>
+                    <td>M.A., M.L.I.Sc.</td>
+                    <td>LIBRARIAN- REFERENCE SECTION</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>P.SRI KALYAN CHAKRAVARTHI</td>
+                    <td>M.A., MHRM., HDSE</td>
+                    <td>DIGITAL LIBRARY  ASST.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>E.USHABALA</td>
+                    <td>B.A.</td>
+                    <td>LIBRARY ASST.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>N.HOSANNA</td>
+                    <td>B.Sc., M.L.I.Sc.</td>
+                    <td>LIBRARY ASST.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>E.SUMANTH</td>
+                    <td>B.Com., M.L.I.Sc.</td>
+                    <td>LIBRARY ASST.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>P. BAJIMUN</td>
+                    <td>INTERMEDIATE</td>
+                    <td>HELPER</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>S.SUJINI</td>
+                    <td>S.S.C.</td>
+                    <td>ATTENDER</td>
+                </tr>
+            </table>
+    </div>
+
+    <script>
+        // Function to show library information when the "Register" button is clicked
+        function showLibraryInfo() {
+            document.getElementById("library-info").style.display = "block";
+            // Optionally, you can hide the "Register" button after it's clicked
+            document.querySelector('.register-button').style.display = 'none';
+        }
+
+        // Function to show elements as you scroll down
+        window.onscroll = function () {
+            showOnScroll();
+        };
+
+        function showOnScroll() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.querySelector('.logo').style.display = 'block';
+                document.querySelector('.register-button').style.display = 'block';
+            } else {
+                document.querySelector('.logo').style.display = 'none';
+                document.querySelector('.register-button').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

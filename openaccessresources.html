@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Access Resources</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .container {
+            display: none; /* Hide all sections initially */
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem;
+        }
+
+        .card {
+            background-color: #e3f2fd; /* Changed background color */
+            border-radius: 8px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+            margin: 1rem;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+           
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #343a40;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #6c757d;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Open Access Resources</h1>
+        <a onclick="showSection('researchPapers')">Research Papers</a>
+        <a onclick="showSection('dailyNewspapers')">Daily Newspapers</a>
+        <a onclick="showSection('eBooks')">E-Books</a>
+    </div>
+
+    <div class="container" id="researchPapers">
+        <div class="section-title">Research Papers</div>
+        <!-- Research Papers will be injected here -->
+    </div>
+
+    <div class="container" id="dailyNewspapers">
+        <div class="section-title">Daily Newspapers</div>
+        <!-- Daily Newspapers will be injected here -->
+    </div>
+
+    <div class="container" id="eBooks">
+        <div class="section-title">E-Books</div>
+        <!-- E-Books will be injected here -->
+    </div>
+
+
+    <script>
+        const researchPapers = [
+            { title: "A Relational Model of Data for Large Shared Data Banks", author: "E. F. Codd", link: "https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf", image: "https://via.placeholder.com/300x200?text=Data+Model" },
+            { title: "The PageRank Citation Ranking: Bringing Order to the Web", author: "Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd", link: "http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf", image: "https://via.placeholder.com/300x200?text=PageRank" },
+            { title: "The Electrodynamics of Moving Bodies", author: "Albert Einstein", link: "https://users.physics.ox.ac.uk/~rtaylor/teaching/specrel.pdf", image: "https://via.placeholder.com/300x200?text=Electrodynamics" },
+            { title: "Experimental Observation of the Quantum Hall Effect", author: "Klaus von Klitzing, G. Dorda, and M. Pepper", link: "https://arxiv.org/html/2407.05903v1", image: "https://via.placeholder.com/300x200?text=Quantum+Hall+Effect" },
+            { title: "The Structure of DNA", author: "James Watson and Francis Crick", link: "https://www.nature.com/articles/171737a0", image: "https://via.placeholder.com/300x200?text=Structure+of+DNA" },
+            { title: "On the Origin of Species", author: "Charles Darwin", link: "https://en.wikipedia.org/wiki/On_the_Origin_of_Species", image: "https://via.placeholder.com/300x200?text=Origin+of+Species" },
+            { title: "On the Constitution of Atoms and Molecules", author: "Niels Bohr", link: "https://uni-tuebingen.de/fileadmin/Uni_Tuebingen/Fakultaeten/MathePhysik/Institute/IAP/Forschung/MOettel/Geburt_QM/bohr_PhilMag_26_1_1913.pdf", image: "https://via.placeholder.com/300x200?text=Atoms+and+Molecules" },
+            { title: "The Synthesis of a New Organic Compound", author: "Marie Curie", link: "https://www.ncbi.nlm.nih.gov/books/NBK6522/", image: "https://via.placeholder.com/300x200?text=Organic+Compound" },
+            { title: "On Computable Numbers, with an Application to the Entscheidungsproblem", author: "Alan Turing", link: "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf", image: "https://via.placeholder.com/300x200?text=Computable+Numbers" },
+            { title: "Euclid's Elements", author: "Euclid", link: "https://farside.ph.utexas.edu/books/Euclid/Elements.pdf", image: "https://via.placeholder.com/300x200?text=Euclid's+Elements" },
+            { title: "An Inquiry into the Nature and Causes of the Wealth of Nations", author: "Adam Smith", link: "https://www.gutenberg.org/ebooks", image: "https://via.placeholder.com/300x200?text=Wealth+of+Nations" }
+        ];
+
+        const dailyNewspapers = [
+            { title: "The New York Times", link: "https://www.nytimes.com/", image: "https://via.placeholder.com/300x200?text=New+York+Times" },
+            { title: "The Guardian", link: "https://www.theguardian.com/international", image: "https://via.placeholder.com/300x200?text=The+Guardian" },
+            { title: "The Washington Post", link: "https://www.washingtonpost.com/", image: "https://via.placeholder.com/300x200?text=Washington+Post" },
+            { title: "The Times of India", link: "https://timesofindia.indiatimes.com/", image: "https://via.placeholder.com/300x200?text=Times+of+India" },
+            { title: "South China Morning Post", link: "https://www.scmp.com/", image: "https://via.placeholder.com/300x200?text=SCMP" },
+            { title: "Le Monde", link: "https://www.lemonde.fr/en/", image: "https://via.placeholder.com/300x200?text=Le+Monde" },
+            { title: "El País", link: "https://elpais.com/", image: "https://via.placeholder.com/300x200?text=El+País" }
+        ];
+
+        const eBooks = [
+            { title: "Pride and Prejudice", author: "Jane Austen", link: "https://www.gutenberg.org/ebooks/1342", image: "https://via.placeholder.com/300x200?text=Pride+and+Prejudice" },
+            { title: "Moby Dick", author: "Herman Melville", link: "https://www.gutenberg.org/ebooks/2701", image: "https://via.placeholder.com/300x200?text=Moby+Dick" },
+            { title: "War and Peace", author: "Leo Tolstoy", link: "https://www.gutenberg.org/ebooks/2600", image: "https://via.placeholder.com/300x200?text=War+and+Peace" }
+        ];
+
+        function createCard(item) {
+            return `
+                <div class="card">
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="card-content">
+                        <div class="card-title">${item.title}</div>
+                        <div class="card-text">${item.author || ''}</div>
+                        <a class="card-link" href="${item.link}" target="_blank">Read more</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function injectContent(sectionId, contentArray) {
+            const container = document.getElementById(sectionId);
+            container.innerHTML = contentArray.map(item => createCard(item)).join('');
+        }
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.container');
+            sections.forEach(section => section.style.display = 'none'); // Hide all sections
+            document.getElementById(sectionId).style.display = 'flex'; // Show selected section
+        }
+
+        // Initially show the first section
+        document.addEventListener('DOMContentLoaded', () => {
+            injectContent('researchPapers', researchPapers);
+            injectContent('dailyNewspapers', dailyNewspapers);
+            injectContent('eBooks', eBooks);
+            injectContent('journals', journals);
+            showSection('researchPapers'); // Default to show research papers
+        });
+    </script>
+
+</body>
+</html>
